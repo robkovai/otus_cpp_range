@@ -6,9 +6,8 @@ addons:
     packages:
     - libboost-test-dev
     - python-pip
-install:
-- pip install conan
 script:
+- pip install conan
 - conan install .
 - cmake .
 - cmake --build .
