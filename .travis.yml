@@ -1,13 +1,11 @@
 dist: xenial
-language: cpp
+language: python
+python: "3.7"
 compiler: clang
-addons:
-  apt:
-    packages:
-    - libboost-test-dev
-    - python-pip
-script:
+install:
 - pip install conan
+- conan user
+script:
 - conan install .
 - cmake .
 - cmake --build .
