@@ -3,8 +3,8 @@ language: python
 python: "3.7"
 compiler: clang
 install:
-- pip install conan
-- conan user
+  - pip3 install conan
+  - conan user
 script:
 - conan install .
 - cmake .
